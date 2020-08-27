@@ -1,0 +1,38 @@
+.avatar-box {
+    margin-top: 10%;
+    display: block;
+}
+
+.avatar-image {
+    display: block;
+    margin: {
+        left: auto;
+        right: auto;
+    }
+    width: 150px;
+    img {
+        object-fit: cover;
+        max-width: 150px;
+        max-height: auto;
+        border-radius: 10px;
+        box-shadow: -4px 4px 18px -5px rgba(29,53,87,0.72);
+    }
+}
+
+.avatar-description {
+    margin: {
+        top: 10%;
+        bottom: 30%;
+    }
+    font-weight: 100;
+    h1 {
+        text-align: center;
+        font-weight: 400;
+    }
+    p {
+        margin: {
+            left: 20%;
+            right: 20%;
+        }
+    }
+}

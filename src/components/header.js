@@ -19,9 +19,6 @@ export function AppHeader() {
                     </div>
                 </div>
             </div>
-            <div className={styles['flex-container']}>
-                <div className={styles['stripe-item']} />
-            </div>
         </div>
     )
 }

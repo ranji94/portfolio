@@ -6,7 +6,7 @@
 .content-item {
     @extend .flex-item;
     @include main-text;
-    color: black;
+    color: $lead-text-color;
     justify-content: space-around;
     text-align: justify;
     background-color: $content_bg_color;
@@ -20,6 +20,10 @@
         top: 3%;
         bottom: 3%;
     }
+
+    h1 {
+        text-align: center;
+    }
 }
 
 .first-letter {
@@ -28,4 +32,24 @@
     font-weight: bolder;
     font-size: 2em;
     letter-spacing: 5px;
+}
+
+.content-container {
+    @extend .flex-container;
+    @include main-text;
+    color: $lead-text-color;
+    background-color: $content-bg-color;
+    justify-content: center;
+    align-content: center;
+}
+
+.content-box {
+    margin: {
+        left: 20%;
+        right: 20%;
+    }
+}
+
+.about-item {
+    flex: 50%;
 }

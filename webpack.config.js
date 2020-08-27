@@ -48,6 +48,10 @@ module.exports = {
           loader: 'html-loader',
           options: {minimize: true}
         }
+      },
+      {
+        test: /\.eot$|\.ttf$|\.woff$|\.png$|\.jpg$/,
+        use: 'file-loader?name=data/3rdparty/[name]-[sha1:hash:5].[ext]'
       }
     ]
   },

@@ -1,0 +1,35 @@
+.skills-container {
+    margin-top: 10%;
+    user-select: none;
+    // border: solid black 2px;
+}
+
+.skill-bar-container {
+    @extend .flex-container;
+    margin-top: 5%;
+}
+
+.skill-bar-wrapper {
+    border-radius: 10px;
+    width: 100%;
+    background-color: $separator-bg-color-secondary;
+}
+
+.skill-bar {
+    @include vertical-align;
+    border-radius: 10px;
+    height: 20px;
+    background-color: $stripe_bg_color;
+    color: $content-bg-color;
+}
+
+.skill-bar-box {
+    flex: 90%;
+}
+
+.skill-bar-description {
+    @include vertical-align;
+    @include content-text;
+    color: $lead-text-color;
+    flex: 10%;
+}
