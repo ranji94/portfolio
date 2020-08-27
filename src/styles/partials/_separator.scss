@@ -1,0 +1,40 @@
+.separator-container-primary {
+    @extend .flex-container;
+    background-color: $separator-bg-color-primary;
+    color: $header-text-color;
+    min-height: 150px;
+}
+
+.separator-container-secondary {
+    @extend .flex-container;
+    background-color: $separator-bg-color-secondary;
+    color: $header-text-color;
+    min-height: 50px;
+}
+
+.separator-item {
+    @extend .flex-item;
+    @include vertical-align;
+}
+
+.separator-header-default {
+    @include quote;
+    font-size: 2rem;
+    user-select: none;
+}
+
+.separator-header-italic {
+    @extend .separator-header-default;
+    font-style: italic;
+}
+
+.separator-subtext-default {
+    @include main-text;
+    font-weight: 100;
+    font-size: 1.2em;
+}
+
+.separator-subtext-italic {
+    @extend .separator-subtext-default;
+    font-style: italic;
+}

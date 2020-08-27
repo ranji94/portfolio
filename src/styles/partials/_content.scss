@@ -1,0 +1,31 @@
+.stripe-item {
+    @extend .flex-item;
+    background-color: $stripe_bg_color;
+}
+
+.content-item {
+    @extend .flex-item;
+    @include main-text;
+    color: black;
+    justify-content: space-around;
+    text-align: justify;
+    background-color: $content_bg_color;
+    font-size: 1.3em;
+}
+
+.content-area {
+    margin: {
+        left: 20%;
+        right: 20%;
+        top: 3%;
+        bottom: 3%;
+    }
+}
+
+.first-letter {
+    @include medieval-text;
+    color: $stripe_bg_color;
+    font-weight: bolder;
+    font-size: 2em;
+    letter-spacing: 5px;
+}

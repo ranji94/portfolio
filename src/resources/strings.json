@@ -1,0 +1,31 @@
+[
+    {
+        "stringCode": "about-description",
+        "value": [
+            "Hi, my name is Jędrzej and I am pleased to see you in my portfolio website. First of all, let me describe something about myself.",
+            " I am born in "
+        ]
+    },
+    { 
+        "stringCode": "header-main",
+        "value": "Hi, I am Jędrzej Miłosz Piasecki"
+    },
+    { 
+        "stringCode": "header-sub",
+        "value": "I am a Software Engineer"
+    },
+    {
+        "stringCode": "quote-1",
+        "value": "There’s a way to do it better – find it."
+    },
+    {
+        "stringCode": "quote-1-author",
+        "value": "Thomas A. Edison"
+    },
+    {
+        "stringCode": "projects-description",
+        "value": [
+            "I contributed in couple of projects, some of these you can check below:"
+        ]
+    }
+]

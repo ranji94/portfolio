@@ -1,0 +1,17 @@
+[
+    { 
+        "stringCode": "menu-item-about",
+        "value": "About",
+        "link": "#about"
+    },
+    { 
+        "stringCode": "menu-item-projects",
+        "value": "Projects",
+        "link": "#projects"
+    },
+    {
+        "stringCode": "menu-item-skills",
+        "value": "Skills",
+        "link": "#skills"
+    }
+]

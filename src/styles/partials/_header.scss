@@ -1,0 +1,40 @@
+@import './formatters';
+@import './fonts';
+
+.menu-item {
+    @include content-text;
+    flex: auto;
+    text-align: right;
+    @include link-button;
+}
+
+.menu-container {
+    @extend .flex-container;
+}
+
+.header-container {
+    @include vertical-align;
+    @include content-text;
+    color: white;
+    background-color: $header-bg-color;
+    height: $header-height;
+    user-select: none;
+} 
+
+.header-button {
+    @include link-button;
+    @include content-text;
+    display: block;
+    position: relative;
+}
+
+.header-main {
+    letter-spacing: 6px;
+    animation: enter-from-bottom 0.5s $animation-cubic;
+}
+
+.header-sub {
+    text-align: center;
+    font-style: italic;
+    animation: enter-from-top 0.5s $animation-cubic;
+}
