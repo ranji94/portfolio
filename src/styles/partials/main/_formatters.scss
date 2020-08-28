@@ -20,31 +20,3 @@
         font-weight: 400;
     }
 }
-
-@mixin link-button {
-    z-index: 2;
-    background-color: $header-bg-color;
-    color: $header-text-color;
-    padding: {
-        top: 1%;
-        bottom: 1%;
-        right: 1%;
-    }
-    a {
-        z-index: 2;
-        text-decoration: none;
-        font-weight: bold;
-        letter-spacing: 2px;
-        color: $header-text-color;
-        border: solid 2px $header-text-color;
-        transition: border 0.2s;
-        transition: color 0.2s;
-        border-radius: 5px;
-        padding: 3px;
-        margin-left: 1%;
-    }
-    a:hover {
-        border: solid 2px $stripe_bg_color;
-        color: $stripe_bg_color;
-    }
-}

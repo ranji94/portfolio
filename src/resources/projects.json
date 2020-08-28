@@ -1,0 +1,12 @@
+[
+    {
+        "header": "Device Monitor",
+        "description": [
+            "This application is used for automatic CAN and OBD data analysis,",
+            "collected via GSM/GPS devices installed in cars.",
+            "The Device Monitor is mainly aimed at experts in the field of car telematics, to make controlling the vehicle fleet easier."
+        ],
+        "serviceStack": ["Java", "Spring", "Kafka", "Ignite", "Oracle SQL"],
+        "uiStack": ["React", "Redux"]
+    }
+]

@@ -54,5 +54,20 @@
         "stringCode": "tab-other",
         "value": "Other",
         "langCode": "en_GB"
+    },
+    { 
+        "stringCode": "menu-item-about",
+        "value": "About",
+        "langCode": "en_GB"
+    },
+    { 
+        "stringCode": "menu-item-projects",
+        "value": "Projects",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "menu-item-contact",
+        "value": "Contact",
+        "langCode": "en_GB"
     }
 ]

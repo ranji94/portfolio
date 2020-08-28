@@ -1,5 +1,6 @@
 .tabs-container {
     margin-top: 10%;
+    margin-bottom: 10%;
 }
 
 .tabs-switcher {
@@ -15,6 +16,7 @@
     transition: border-color 0.2s;
     background-color: $header-bg-color;
     border: 1px solid $header-bg-color;
+    cursor: pointer;
 }
 
 .tab-item:hover {
