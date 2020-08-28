@@ -1,21 +1,23 @@
 {
-  "name": "react-webpack-babel-sass-boilerplate",
+  "name": "portfolio",
   "version": "2.0.0",
-  "description": "Boilerplate React application with Webpack, Babel and Sass.",
+  "description": "Jędrzej Miłosz Piasecki Software Engineer's portfolio.",
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/webpack -p --mode production",
     "start": "./node_modules/.bin/webpack-dev-server --config ./webpack.config.js --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marcnuri-demo/react-webpack-babel-sass-boilerplate.git"
+    "url": "git+https://github.com/ranji94/portfolio.git"
   },
   "keywords": [],
   "author": {
-    "name": "Marc Nuri",
-    "url": "https://blog.marcnuri.com"
+    "name": "Jędrzej Miłosz Piasecki",
+    "url": "https://ranji94.github.io/portfolio"
   },
   "license": "Apache-2.0",
   "licenses": [
@@ -24,10 +26,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0"
     }
   ],
-  "bugs": {
-    "url": "https://github.com/marcnuri-demo/react-webpack-babel-sass-boilerplate/issues"
-  },
-  "homepage": "https://github.com/marcnuri-demo/react-webpack-babel-sass-boilerplate#readme",
+  "homepage": "https://ranji94.github.io/portfolio",
   "devDependencies": {
     "@babel/core": "^7.11.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
@@ -55,6 +54,7 @@
     "antd": "^4.6.1",
     "classnames": "^2.2.6",
     "file-loader": "^6.0.0",
+    "gh-pages": "^3.1.0",
     "json-loader": "^0.5.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
