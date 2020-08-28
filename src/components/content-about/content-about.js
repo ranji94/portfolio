@@ -13,8 +13,8 @@ import advantagesData from '../../resources/advantages.json'
 
 class ContentAbout extends Component {
     render() {
-        const { headerId,
-            header } = this.props
+        const { header,
+            reference } = this.props
 
         const tabs = [
             { id: 1, item: loadText('tab-backend'), content: <Skills skills={backendSkills} /> },
@@ -30,7 +30,7 @@ class ContentAbout extends Component {
                 <div className={styles['content-box']}>
                     <div className={styles['flex-container']}>
                         <div className={styles['content-item']}>
-                            <div id={headerId} className={styles['content-area']}>
+                            <div ref={reference} className={styles['content-area']}>
                                 <h1>{header}</h1>
                             </div>
                         </div>
@@ -65,11 +65,13 @@ class ContentAbout extends Component {
                 {text.substr(1)}
             </div>)
     }
+
+    animateSkillBar() {
+        console.log('TOGGLED!')
+    }
 }
 
 ContentAbout.defaultProps = {
-    header: 'Header',
-    content: 'Content',
-    headerId: '#defaultHeaderId'
+    header: 'About'
 }
 export default ContentAbout

@@ -1,15 +1,86 @@
 @import '../main/formatters';
 @import '../main/fonts';
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: $header-bg-color;
+    color: $content-bg-color;
+    @include content-text;
+    padding-bottom: 13px;
+    text-align: right;
+}
+  
+li {
+    display: inline;
+    border: solid 2px $header-text-color;
+    padding: 3px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li:hover {
+    border: solid 2px $stripe_bg_color;
+    color: $stripe_bg_color;
+}
+
 .menu-item {
     @include content-text;
-    flex: auto;
+    // display: flex;
     text-align: right;
-    @include link-button;
+    background-color: $header-bg-color;
+    color: $content-bg-color;
+}
+
+.component-slot {
+    flex: 80%
+}
+
+.menu-button {
+    flex: auto;
+    border: solid 2px $header-text-color;
+    padding: 3px;
+    margin-right: 1%;
+    text-align: center;
+    transition: border 0.2s;
+    transition: color 0.2s;
+    border-radius: 5px;
+    z-index: 2;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.menu-button:hover {
+    border: solid 2px $stripe_bg_color;
+    color: $stripe_bg_color;
+}
+
+.menu-button-container {
+    @extend .flex-container;
+}
+
+.menu-button-description {
+    @include vertical-align;
+    flex: 80%;
+}
+
+.menu-button-icon {
+    flex: 20%;
 }
 
 .menu-container {
     @extend .flex-container;
+    @include content-text;
+    background-color: $header-bg-color;
+    color: $content-bg-color;
+    padding-bottom: 5px;
+    user-select: none;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 .header-container {
@@ -22,11 +93,11 @@
 } 
 
 .header-button {
-    @include link-button;
-    @include content-text;
+    @extend .menu-button;
     display: block;
     position: relative;
     transition: font-size 0.2s;
+    width: 100%;
 }
 
 .header-button:hover {

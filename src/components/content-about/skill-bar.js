@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { setAnimateSkillbars } from '../../redux/actions'
 import styles from '../../styles/main.scss'
 import { CheckOutlined } from '@material-ui/icons'
 
 class SkillBar extends Component {
     render() {
         const { barPercentage,
-            children } = this.props
+            children,
+            animateSkillbars,
+            setAnimateSkillbars } = this.props
 
         const limitedBarPercentage = barPercentage > 100 ? 100 : barPercentage
+        const skillBarStyles = {
+            static: styles['skill-bar'],
+            animated: styles['skill-bar-animated']
+        }
 
         return (<div className={styles['skill-bar-container']}>
             <div className={styles['skill-bar-description']}>
@@ -15,7 +23,9 @@ class SkillBar extends Component {
             </div>
             <div className={styles['skill-bar-box']}>
                 <div className={styles['skill-bar-wrapper']}>
-                    <div style={{ width: limitedBarPercentage + '%' }} className={styles['skill-bar']}>
+                    <div onAnimationEnd={() => setAnimateSkillbars(false)}
+                        style={{ width: limitedBarPercentage + '%' }}
+                        className={animateSkillbars ? skillBarStyles.animated : skillBarStyles.static}>
                         {barPercentage === '101' ? <CheckOutlined /> : limitedBarPercentage + '%'}
                     </div>
                 </div>
@@ -24,4 +34,12 @@ class SkillBar extends Component {
     }
 }
 
-export default SkillBar
+const mapStateToProps = (state) => {
+    const { animateSkillbars } = state.animateSkillbars || false
+    return { animateSkillbars }
+}
+
+export default connect(
+    mapStateToProps, 
+    { setAnimateSkillbars }
+)(SkillBar)

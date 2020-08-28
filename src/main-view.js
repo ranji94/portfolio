@@ -1,20 +1,32 @@
 import React, { Component } from 'react'
-import { AppHeader } from './components/header'
+import AppHeader from './components/header'
 import ContentAbout from './components/content-about/content-about'
 import Menu from './components/menu'
 import Separator from './components/separator'
 import { loadText } from './operations'
-import MENU_ITEMS from './resources/menu-items.json'
+import ContentProjects from './components/content-projects/content-projects'
 
 class MainView extends Component {
+  constructor(props) {
+    super(props)
+    this.scrollToNode = this.scrollToNode.bind(this);
+  }
+
+  scrollToNode(node) {
+    node.scrollIntoView({ behavior: 'smooth' });
+  }
+
   render() {
     return (<div>
-      <AppHeader />
-      <Menu />
+      <AppHeader scrollToAboutNode={() => this.scrollToNode(this.about)} />
+
+      <Menu scrollToAboutNode={() => this.scrollToNode(this.about)}
+        scrollToProjectsNode={() => this.scrollToNode(this.projects)} />
+
       <ContentAbout {...{
-        headerId: '#about',
-        header: loadText('menu-item-about', MENU_ITEMS),
-        content: loadText('about-description')
+        header: loadText('menu-item-about'),
+        content: loadText('about-description'),
+        reference: (node) => this.about = node
       }} />
       <Separator headerQuote {...{
         header: loadText('quote-1'),
@@ -22,11 +34,16 @@ class MainView extends Component {
         headerStyle: 'italic',
         subtextStyle: 'italic'
       }} />
-      {/* <Content {...{
-        headerId: '#projects',
-        header: loadText('menu-item-projects', MENU_ITEMS),
-        content: loadText('projects-description')
-      }} /> */}
+      <ContentProjects {...{
+        header: loadText('menu-item-projects'),
+        reference: (node) => this.projects = node
+      }} />
+      <Separator headerQuote {...{
+        header: loadText('quote-1'),
+        subtext: loadText('quote-1-author'),
+        headerStyle: 'italic',
+        subtextStyle: 'italic'
+      }} />
     </div>)
   }
 }

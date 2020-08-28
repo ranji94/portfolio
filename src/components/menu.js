@@ -1,22 +1,22 @@
 import React, { Component } from 'react'
 import styles from '../styles/main.scss'
-import MENU_ITEMS from '../resources/menu-items.json';
-import MenuItem from './menu-item'
+import { loadText } from '../operations';
 
 class Menu extends Component {
-    render () {
-        const navItems = []
+    render() {
+        const { scrollToAboutNode,
+            scrollToProjectsNode } = this.props
 
-        MENU_ITEMS.forEach(i => {
-            navItems.push(<MenuItem link={i.link}>{i.value}</MenuItem>)
-        })
+        const navItems = [
+            <li onClick={() => scrollToAboutNode()}>{loadText('menu-item-about')}</li>,
+            <li onClick={() => scrollToProjectsNode()}>{loadText('menu-item-projects')}</li>,
+            <li>{loadText('menu-item-contact')}</li>
+        ]
 
         return (
-            <div className={styles['menu-container']}>
-                <div className={styles['menu-item']}>
-                    {navItems}
-                </div>
-            </div>
+            <ul>
+                {navItems}
+            </ul>
         )
     }
 }

@@ -8,6 +8,10 @@
         "skillPercentage": "80"
     },
     {
+        "item": "RWD",
+        "skillPercentage": "80"
+    },
+    {
         "item": "ES6/JS",
         "skillPercentage": "75"
     },
