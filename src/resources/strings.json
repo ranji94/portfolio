@@ -1,31 +1,58 @@
 [
     {
-        "stringCode": "about-description",
+        "stringCode": "avatar-description",
         "value": [
-            "Hi, my name is Jędrzej and I am pleased to see you in my portfolio website. First of all, let me describe something about myself.",
-            " I am born in "
-        ]
+            "I'm a Fullstack developer passionate about modern technologies and automation.",
+            " I really enjoy to learn and use new technologies in my projects and creating solutions",
+            " that will move world forward."
+        ],
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "avatar-header",
+        "value": "Who am I?",
+        "langCode": "en_GB"
     },
     { 
         "stringCode": "header-main",
-        "value": "Hi, I am Jędrzej Miłosz Piasecki"
+        "value": "Hi, I am Jędrzej Miłosz Piasecki",
+        "langCode": "en_GB"
     },
     { 
         "stringCode": "header-sub",
-        "value": "I am a Software Engineer"
+        "value": "I am a Software Engineer",
+        "langCode": "en_GB"
     },
     {
         "stringCode": "quote-1",
-        "value": "There’s a way to do it better – find it."
+        "value": "There’s a way to do it better – find it.",
+        "langCode": "en_GB"
     },
     {
         "stringCode": "quote-1-author",
-        "value": "Thomas A. Edison"
+        "value": "Thomas A. Edison",
+        "langCode": "en_GB"
     },
     {
         "stringCode": "projects-description",
         "value": [
             "I contributed in couple of projects, some of these you can check below:"
-        ]
+        ],
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "tab-backend",
+        "value": "Backend skills",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "tab-frontend",
+        "value": "Frontend skills",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "tab-other",
+        "value": "Other",
+        "langCode": "en_GB"
     }
 ]

@@ -1,0 +1,24 @@
+.advantage-icon-background {
+    @include vertical-align;
+    border-radius: 50%;
+    width: 8vw;
+    height: 8vw;
+    background-color: $separator-bg-color-primary;
+}
+
+.advantage-icon-box {
+    @include vertical-align;
+}
+
+.advantage-icon {
+    color: $content-bg-color;
+}
+
+.advantage-item {
+    flex: 20%;
+}
+
+.advantage-description {
+    @extend .avatar-description;
+    text-align: justify;
+}

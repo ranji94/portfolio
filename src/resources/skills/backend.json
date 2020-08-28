@@ -1,0 +1,30 @@
+[
+    {
+        "item": "Java",
+        "skillPercentage": "80"
+    },
+    {
+        "item": "Spring",
+        "skillPercentage": "75"
+    },
+    {
+        "item": "Oracle SQL",
+        "skillPercentage": "70"
+    },
+    {
+        "item": "Kafka",
+        "skillPercentage": "30"
+    },
+    {
+        "item": "Ignite",
+        "skillPercentage": "30"
+    },
+    {
+        "item": "CI/CD",
+        "skillPercentage": "30"
+    },
+    {
+        "item": "REST",
+        "skillPercentage": "101"
+    }
+]
