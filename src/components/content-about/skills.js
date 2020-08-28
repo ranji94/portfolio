@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../styles/main.scss'
+import styles from '../../styles/main.scss'
 import SkillBar from './skill-bar'
 
 class Skills extends Component {

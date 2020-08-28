@@ -1,50 +1,26 @@
 import React, { Component } from 'react'
-import styles from '../styles/main.scss'
-import photo from '../resources/me.png'
+import styles from '../../styles/main.scss'
+import photo from '../../resources/me.png'
 import AvatarCard from './avatar-card'
 import Skills from './skills'
-import SKILLS_DATA from '../resources/skills.json'
-import { loadText } from '../operations'
-import Advantages from './advantages'
-import { WebOutlined,
-    CodeOutlined,
-    PeopleOutlined,
-    ImportantDevicesOutlined } from '@material-ui/icons'
-
-const ADVANTAGE_ICON_SIZE = '5vw'
-
-export const ADVANTAGES_PROPS = [
-    {
-        header: loadText('advantage-1-header'),
-        description: loadText('advantage-1-description'),
-        icon: (<WebOutlined style={{ fontSize: ADVANTAGE_ICON_SIZE }} className={styles['advantage-icon']} />),
-        iconBackgroundColor: '#EE6352'
-    },
-    {
-        header: loadText('advantage-2-header'),
-        description: loadText('advantage-2-description'),
-        icon: (<CodeOutlined style={{ fontSize: ADVANTAGE_ICON_SIZE }} className={styles['advantage-icon']} />),
-        iconBackgroundColor: '#08B2E3'
-    },
-    {
-        header: loadText('advantage-3-header'),
-        description: loadText('advantage-3-description'),
-        icon: (<PeopleOutlined style={{ fontSize: ADVANTAGE_ICON_SIZE }} className={styles['advantage-icon']} />),
-        iconBackgroundColor: '#57A773'
-    },
-    {
-        header: loadText('advantage-4-header'),
-        description: loadText('advantage-4-description'),
-        icon: (<ImportantDevicesOutlined style={{ fontSize: ADVANTAGE_ICON_SIZE }} className={styles['advantage-icon']} />),
-        iconBackgroundColor: '#484D6D'
-    }
-]
+import Tabs from '../tabs/tabs'
+import backendSkills from '../../resources/skills/backend.json'
+import frontendSkills from '../../resources/skills/frontend.json'
+import otherSkills from '../../resources/skills/other.json'
+import { loadText } from '../../operations'
+import Advantages from '../advantage/advantages'
+import advantagesData from '../../resources/advantages.json'
 
 class ContentAbout extends Component {
     render() {
         const { headerId,
-            header,
-            content } = this.props
+            header } = this.props
+
+        const tabs = [
+            { id: 1, item: loadText('tab-backend'), content: <Skills skills={backendSkills} /> },
+            { id: 2, item: loadText('tab-frontend'), content: <Skills skills={frontendSkills} /> },
+            { id: 3, item: loadText('tab-other'), content: <Skills skills={otherSkills} /> },
+        ]
 
         return (
             <div>
@@ -68,11 +44,13 @@ class ContentAbout extends Component {
                             }} />
                         </div>
                         <div className={styles['about-item']}>
-                            <Skills skills={SKILLS_DATA} />
+                            <div className={styles['tabs-container']}>
+                                <Tabs {...{ tabs }} />
+                            </div>
                         </div>
                     </div>
                     <div className={styles['content-container']}>
-                        <Advantages items={ADVANTAGES_PROPS}/>
+                        <Advantages {...{ advantagesData }} />
                     </div>
                 </div>
             </div>)

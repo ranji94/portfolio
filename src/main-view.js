@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { AppHeader } from './components/header'
-import ContentAbout from './components/content-about'
+import ContentAbout from './components/content-about/content-about'
 import Menu from './components/menu'
 import Separator from './components/separator'
 import { loadText } from './operations'

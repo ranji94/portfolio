@@ -1,5 +1,5 @@
-@import './formatters';
-@import './fonts';
+@import '../main/formatters';
+@import '../main/fonts';
 
 .menu-item {
     @include content-text;
@@ -26,6 +26,11 @@
     @include content-text;
     display: block;
     position: relative;
+    transition: font-size 0.2s;
+}
+
+.header-button:hover {
+    font-size: 17px;
 }
 
 .header-main {

@@ -8,10 +8,5 @@
         "stringCode": "menu-item-projects",
         "value": "Projects",
         "link": "#projects"
-    },
-    {
-        "stringCode": "menu-item-skills",
-        "value": "Skills",
-        "link": "#skills"
     }
 ]

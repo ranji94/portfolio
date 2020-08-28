@@ -1,12 +1,11 @@
 .skills-container {
-    margin-top: 10%;
+    padding: 5% 5% 5% 5%;
     user-select: none;
-    // border: solid black 2px;
 }
 
 .skill-bar-container {
     @extend .flex-container;
-    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .skill-bar-wrapper {
@@ -24,12 +23,12 @@
 }
 
 .skill-bar-box {
-    flex: 90%;
+    flex: 75%;
 }
 
 .skill-bar-description {
     @include vertical-align;
     @include content-text;
     color: $lead-text-color;
-    flex: 10%;
+    flex: 25%;
 }

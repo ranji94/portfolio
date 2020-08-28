@@ -5,64 +5,54 @@
             "I'm a Fullstack developer passionate about modern technologies and automation.",
             " I really enjoy to learn and use new technologies in my projects and creating solutions",
             " that will move world forward."
-        ]
+        ],
+        "langCode": "en_GB"
     },
     {
         "stringCode": "avatar-header",
-        "value": "Who am I?"
+        "value": "Who am I?",
+        "langCode": "en_GB"
     },
     { 
         "stringCode": "header-main",
-        "value": "Hi, I am Jędrzej Miłosz Piasecki"
+        "value": "Hi, I am Jędrzej Miłosz Piasecki",
+        "langCode": "en_GB"
     },
     { 
         "stringCode": "header-sub",
-        "value": "I am a Software Engineer"
+        "value": "I am a Software Engineer",
+        "langCode": "en_GB"
     },
     {
         "stringCode": "quote-1",
-        "value": "There’s a way to do it better – find it."
+        "value": "There’s a way to do it better – find it.",
+        "langCode": "en_GB"
     },
     {
         "stringCode": "quote-1-author",
-        "value": "Thomas A. Edison"
+        "value": "Thomas A. Edison",
+        "langCode": "en_GB"
     },
     {
         "stringCode": "projects-description",
         "value": [
             "I contributed in couple of projects, some of these you can check below:"
-        ]
+        ],
+        "langCode": "en_GB"
     },
     {
-        "stringCode": "advantage-1-description",
-        "value": "Clear view and efficiency of UI projects is my priority"
+        "stringCode": "tab-backend",
+        "value": "Backend skills",
+        "langCode": "en_GB"
     },
     {
-        "stringCode": "advantage-1-header",
-        "value": "Transparent"
+        "stringCode": "tab-frontend",
+        "value": "Frontend skills",
+        "langCode": "en_GB"
     },
     {
-        "stringCode": "advantage-2-description",
-        "value": "Writing clean and reusable code adhering to best programming practices"
-    },
-    {
-        "stringCode": "advantage-2-header",
-        "value": "Clean Code"
-    },
-    {
-        "stringCode": "advantage-3-header",
-        "value": "Team player"
-    },
-    {
-        "stringCode": "advantage-3-description",
-        "value": "Working together makes goals easier to achieve. I'm familiar with SCRUM too"
-    },
-    {
-        "stringCode": "advantage-4-header",
-        "value": "Responsive"
-    },
-    {
-        "stringCode": "advantage-4-description",
-        "value": "My applications works on various devices"
+        "stringCode": "tab-other",
+        "value": "Other",
+        "langCode": "en_GB"
     }
 ]

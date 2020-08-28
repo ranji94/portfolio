@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../styles/main.scss'
-import { Avatar } from '@material-ui/core'
-import { loadText } from '../operations'
+import styles from '../../styles/main.scss'
 
 class AvatarCard extends Component {
     render() {

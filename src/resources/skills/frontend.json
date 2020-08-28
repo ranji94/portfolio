@@ -1,0 +1,22 @@
+[
+    {
+        "item": "React",
+        "skillPercentage": "80"
+    },
+    {
+        "item": "SASS/CSS",
+        "skillPercentage": "80"
+    },
+    {
+        "item": "ES6/JS",
+        "skillPercentage": "75"
+    },
+    {
+        "item": "Redux",
+        "skillPercentage": "50"
+    },
+    {
+        "item": "UX",
+        "skillPercentage": "30"
+    }
+]

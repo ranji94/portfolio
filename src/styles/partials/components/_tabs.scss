@@ -1,0 +1,35 @@
+.tabs-container {
+    margin-top: 10%;
+}
+
+.tabs-switcher {
+    @extend .flex-container;
+    @include content-text;
+    color: $content-bg-color;
+}
+
+.tab-item {
+    @extend .flex-item;
+    user-select: none;
+    transition: background-color 0.2s;
+    transition: border-color 0.2s;
+    background-color: $header-bg-color;
+    border: 1px solid $header-bg-color;
+}
+
+.tab-item:hover {
+    background-color: $separator-bg-color-primary;
+}
+
+.tab-item-active {
+    @extend .tab-item;
+    background-color: $separator-bg-color-primary;
+    border-bottom: 2px solid $stripe_bg_color;
+}
+
+.tab-content-container {
+    @include content-text;
+}
+.tab-content {
+    animation: enter-from-top 0.5s cubic-bezier(0.250, 0.470, 0.450, 0.950) both;
+}

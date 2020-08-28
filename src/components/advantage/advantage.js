@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from '../styles/main.scss'
+import styles from '../../styles/main.scss'
 
 
 class Advantage extends Component {

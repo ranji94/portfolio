@@ -1,0 +1,32 @@
+[
+    {
+        "header": "Transparent",
+        "description": "Clear view and efficiency of UI projects is my priority",
+        "icon": "web",
+        "backgroundColor": "#EE6352"
+    },
+    {
+        "header": "Clean Code",
+        "description": "Writing clean and reusable code adhering to best programming practices like SOLID, DRY, KISS",
+        "icon": "code",
+        "backgroundColor": "#08B2E3"
+    },
+    {
+        "header": "Team player",
+        "description": "Working together makes goals easier to achieve. I'm familiar with working in SCRUM too",
+        "icon": "people",
+        "backgroundColor": "#57A773"
+    },
+    {
+        "header": "Responsive",
+        "description": "My applications works on various devices",
+        "icon": "devices",
+        "backgroundColor": "#484D6D"
+    },
+    {
+        "header": "Progressive",
+        "description": "Willingly introducing modern technologies and smart solutions to projects",
+        "icon": "emojiobjects",
+        "backgroundColor": "#EECC53"
+    }
+]
