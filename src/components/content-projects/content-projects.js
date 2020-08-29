@@ -7,9 +7,13 @@ class ContentProjects extends Component {
     render() {
         const { header,
             reference } = this.props
+        
         const projectComponents = []
         Projects.forEach(p => {
             projectComponents.push(<Project
+                repoLink={p.repoLink}
+                projectType={p.projectType}
+                repoCaption={p.repoCaption}
                 description={p.description}
                 serviceStack={p.serviceStack}
                 uiStack={p.uiStack}>

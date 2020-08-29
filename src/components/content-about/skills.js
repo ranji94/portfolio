@@ -9,12 +9,12 @@ class Skills extends Component {
         </div>)
     }
 
-    renderSkills () {
+    renderSkills() {
         const { skills } = this.props
         const skillBars = []
 
         skills.forEach(s => {
-        skillBars.push(<SkillBar {...{ barPercentage: s.skillPercentage }}>{s.item}</SkillBar>)
+            skillBars.push(<SkillBar {...{ barPercentage: s.skillPercentage, skillBarCaption: s.skillCaption }}>{s.item}</SkillBar>)
         });
 
         return skillBars

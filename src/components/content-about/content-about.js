@@ -6,6 +6,7 @@ import Skills from './skills'
 import Tabs from '../tabs/tabs'
 import backendSkills from '../../resources/skills/backend.json'
 import frontendSkills from '../../resources/skills/frontend.json'
+import devToolsSkills from '../../resources/skills/devtools.json'
 import otherSkills from '../../resources/skills/other.json'
 import { loadText } from '../../operations'
 import Advantages from '../advantage/advantages'
@@ -19,7 +20,8 @@ class ContentAbout extends Component {
         const tabs = [
             { id: 1, item: loadText('tab-backend'), content: <Skills skills={backendSkills} /> },
             { id: 2, item: loadText('tab-frontend'), content: <Skills skills={frontendSkills} /> },
-            { id: 3, item: loadText('tab-other'), content: <Skills skills={otherSkills} /> },
+            { id: 3, item: loadText('tab-devtools'), content: <Skills skills={devToolsSkills} /> },
+            { id: 4, item: loadText('tab-other'), content: <Skills skills={otherSkills} /> }
         ]
 
         return (

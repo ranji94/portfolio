@@ -1,26 +1,25 @@
 [
     {
-        "item": "Git",
-        "skillPercentage": "101"
+        "item": "Education",
+        "skillPercentage": "85",
+        "skillCaption": "Bachelor of Engineering"
     },
     {
-        "item": "Jira",
+        "item": "English",
+        "skillPercentage": "70",
+        "skillCaption": "upper-intermediate"
+    },
+    {
+        "item": "Commercial Experience",
+        "skillPercentage": "30",
+        "skillCaption": "1 year"
+    },
+    {
+        "item": "Driving license",
         "skillPercentage": "101"
     },
     {
         "item": "SCRUM",
-        "skillPercentage": "101"
-    },
-    {
-        "item": "Confluence",
-        "skillPercentage": "101"
-    },
-    {
-        "item": "Gradle",
-        "skillPercentage": "101"
-    },
-    {
-        "item": "Webpack",
         "skillPercentage": "101"
     }
 ]
