@@ -51,6 +51,11 @@
         "langCode": "en_GB"
     },
     {
+        "stringCode": "tab-devtools",
+        "value": "Dev Tools",
+        "langCode": "en_GB"
+    },
+    {
         "stringCode": "tab-other",
         "value": "Other",
         "langCode": "en_GB"
@@ -68,6 +73,21 @@
     {
         "stringCode": "menu-item-contact",
         "value": "Contact",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "project-type",
+        "value": "Project Type",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "ui-stack",
+        "value": "UI Stack",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "service-stack",
+        "value": "Service Stack",
         "langCode": "en_GB"
     }
 ]

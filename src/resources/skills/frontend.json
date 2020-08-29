@@ -17,10 +17,14 @@
     },
     {
         "item": "Redux",
-        "skillPercentage": "50"
+        "skillPercentage": "70"
     },
     {
         "item": "UX",
         "skillPercentage": "30"
+    },
+    {
+        "item": "Node.js",
+        "skillPercentage": "50"
     }
 ]

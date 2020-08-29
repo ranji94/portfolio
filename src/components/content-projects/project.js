@@ -1,56 +1,69 @@
 import React, { Component } from 'react'
 import styles from '../../styles/main.scss'
+import { loadText } from '../../operations'
 
 function renderChips(array) {
     const chipsArray = []
 
     array.forEach(i => {
-        chipsArray.push(<span className={styles['technology-chips']}>{i}</span>)
+        chipsArray.push(<div className={styles['chips-item']}><div className={styles['technology-chips']}>{i}</div></div>)
     })
 
     return chipsArray
 }
 
 class Project extends Component {
+    constructor(props) {
+        super(props)
+        this.state = { currentColorIndex: 0 }
+    }
+
     render() {
         const { description,
             children,
             serviceStack,
-            uiStack } = this.props
+            uiStack,
+            repoLink,
+            repoCaption,
+            projectType } = this.props
 
         return (<div className={styles['project-box']}>
             <div className={styles['project-header']}><h1><span>{children}</span></h1></div>
             <div className={styles['flex-container']}>
                 <div className={styles['project-description']}>
+                    <div className={styles['project-type']}>
+                        {loadText('project-type') + ': ' + projectType}
+                    </div>
                     {description}
                 </div>
             </div>
             <div className={styles['flex-container']}>
-                <h3>Service Stack:</h3>
+                <h3>{loadText('service-stack')}:</h3>
             </div>
             <div className={styles['chips-container']}>
                 {
                     typeof serviceStack === 'undefined'
                         ? <span />
-                        : <div className={styles['chips-item']}>
-                            {renderChips(serviceStack)}
-                        </div>
+                        : renderChips(serviceStack)
                 }
             </div>
             <div className={styles['flex-container']}>
-                <h3>UI Stack:</h3>
+                <h3>{loadText('ui-stack')}:</h3>
             </div>
             <div className={styles['chips-container']}>
                 {
                     typeof uiStack === 'undefined'
                         ? <span />
-                        : <div className={styles['chips-item']}>
-                            {renderChips(uiStack)}
-                        </div>
+                        : renderChips(uiStack)
                 }
             </div>
             <div className={styles['flex-container']}>
-                <div className={styles['project-button']}>Link to repository</div>
+                {
+                    typeof repoLink === 'undefined'
+                        ? <span className={styles['project-note']}>{repoCaption}</span>
+                        : <div className={styles['project-button']}><a target="_blank" href={repoLink}>{repoCaption}</a></div>
+                }
+
             </div>
         </div>)
     }

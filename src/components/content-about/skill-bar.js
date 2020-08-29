@@ -4,12 +4,22 @@ import { setAnimateSkillbars } from '../../redux/actions'
 import styles from '../../styles/main.scss'
 import { CheckOutlined } from '@material-ui/icons'
 
+function getSkillBarCaption(caption, value) {
+    if(typeof caption === 'undefined') {
+        return value + '%'
+    }
+    else {
+        return caption
+    }
+}
+
 class SkillBar extends Component {
     render() {
         const { barPercentage,
             children,
             animateSkillbars,
-            setAnimateSkillbars } = this.props
+            setAnimateSkillbars,
+            skillBarCaption } = this.props
 
         const limitedBarPercentage = barPercentage > 100 ? 100 : barPercentage
         const skillBarStyles = {
@@ -26,7 +36,7 @@ class SkillBar extends Component {
                     <div onAnimationEnd={() => setAnimateSkillbars(false)}
                         style={{ width: limitedBarPercentage + '%' }}
                         className={animateSkillbars ? skillBarStyles.animated : skillBarStyles.static}>
-                        {barPercentage === '101' ? <CheckOutlined /> : limitedBarPercentage + '%'}
+                        {barPercentage === '101' ? <CheckOutlined /> : getSkillBarCaption(skillBarCaption, limitedBarPercentage)}
                     </div>
                 </div>
             </div>

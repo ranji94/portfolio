@@ -4,9 +4,92 @@
         "description": [
             "This application is used for automatic CAN and OBD data analysis,",
             "collected via GSM/GPS devices installed in cars.",
-            "The Device Monitor is mainly aimed at experts in the field of car telematics, to make controlling the vehicle fleet easier."
+            "The Device Monitor is mainly aimed at engineers of car telematics, to have an overview to",
+            " most important informations about electronics in cars with GSM/GPS device installed."
         ],
-        "serviceStack": ["Java", "Spring", "Kafka", "Ignite", "Oracle SQL"],
-        "uiStack": ["React", "Redux"]
+        "serviceStack": ["Java", "Spring", "Kafka", "Ignite", "Swagger", "Oracle SQL"],
+        "uiStack": ["React", "Redux"],
+        "repoCaption": "Source code of this project is private property of Webfleet Solutions Development GmbH",
+        "projectType": "Commercial"
+    },
+    {
+        "header": "Device Activation Service",
+        "description": [
+            "Telematics GSM/GPS devices activation service. In this application, user is guided by activation wizard through the steps necessary",
+            " to perform valid device activation. Every step contains complex data validation by frontend and server side to make providing informations",
+            " easier for the user. It is also using logging activation history which is available for Device Monitor project to troubleshooting actions"
+        ],
+        "serviceStack": ["Java", "Spring", "Swagger", "REST", "SOAP", "Oracle SQL"],
+        "uiStack": ["React", "Redux", "Express.js", "Axios"],
+        "repoCaption": "Open Application",
+        "repoLink": "https://link-activation.webfleet.com/?locale=en_us",
+        "projectType": "Commercial"
+    },
+    {
+        "header": "Portfolio",
+        "description": [
+            "Currently you are using this application. Describe it yourself!"
+        ],
+        "serviceStack": ["Serverless"],
+        "uiStack": ["React", "Redux", "SASS"],
+        "repoCaption": "Source Code",
+        "repoLink": "https://github.com/ranji94/portfolio",
+        "projectType": "Non-commercial"
+    },
+    {
+        "header": "Currencies Comparator",
+        "description": [
+            "As the name suggests, the main idea of this application is currencies comparing, to find the most profitable exchange rate",
+            "out of many online currency exchange services. Application supports many curriences in accordance with ISO 4217 standard."
+        ],
+        "serviceStack": ["Mule ESB"],
+        "uiStack": ["React", "Redux", "Material UI"],
+        "repoCaption": "Source Code",
+        "repoLink": "https://github.com/ranji94/-2020-Currencies-Comparator",
+        "projectType": "Non-commercial"
+    },
+    {
+        "header": "Supermarket shopping simulator",
+        "description": [
+            "Simulation engine of processes taking place in Supermarkets. Main goal of this simulation is to examine, how many cash registers",
+            " should have to be opened, to queue does not exceed given length with certain simulation parameters."
+        ],
+        "serviceStack": ["Java", "HLA Portico", "DISSim Lab"],
+        "uiStack": ["JavaFX"],
+        "repoCaption": "Currently Source Code is unavailable",
+        "projectType": "Non-commercial"
+    },
+    {
+        "header": "Car Rental Voice Assistant",
+        "description": [
+            "Car rental wizard guide with voice assistant and speech controlled view. "
+        ],
+        "serviceStack": ["C#", "Microsoft Speech Platfrom"],
+        "uiStack": ["WPF"],
+        "repoCaption": "Source Code",
+        "repoLink": "https://github.com/ranji94/-2020-Car-rental-voice-assistant",
+        "projectType": "Non-commercial (Academical)"
+    },
+    {
+        "header": "T-Diagnoseable structures optimizer",
+        "description": [
+            "Application used to solving IT system diagnosis structures optimization problem, based on own created algorithm that includes Hakimi-Amin theorem."
+        ],
+        "serviceStack": ["Java"],
+        "uiStack": ["Console"],
+        "repoCaption": "Source Code",
+        "repoLink": "https://github.com/ranji94/-2019-tDiagnosableStructures",
+        "projectType": "Non-commercial (Academical)"
+    },
+    {
+        "header": "Highlife",
+        "description": [
+            "First person shooter game being a clone of Half-Life on unity engine, introducing features characteristic for modern FPS games."
+        ],
+        "serviceStack": ["C#", "Unity 2019", "ShaderLab"],
+        "uiStack": ["Unity 2019 Renderer"],
+        "repoCaption": "Source Code",
+        "repoLink": "https://github.com/ranji94/-2020-Highlife",
+        "projectType": "Non-commercial"
     }
 ]
