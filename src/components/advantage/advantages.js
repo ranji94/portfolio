@@ -24,7 +24,7 @@ function getIcon(iconName) {
         { name: 'emojiobjects', iconComponent: <EmojiObjectsOutlined {...defaultIconProps} /> },
     ]
 
-    iconFactory.forEach(ico => {
+    iconFactory.map(ico => {
         if (ico.name === iconName) {
             component = ico.iconComponent
         }
@@ -44,7 +44,7 @@ class Advantages extends Component {
         const { advantagesData } = this.props
         const advantageComponents = []
 
-        advantagesData.forEach(a => {
+        advantagesData.map(a => {
             advantageComponents.push(<div className={styles['advantage-item']}>
                 <Advantage {...{
                     header: a.header,

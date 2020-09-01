@@ -36,7 +36,7 @@ class Tabs extends Component {
         const items = []
         const { tabs } = this.props
 
-        tabs.forEach(t => {
+        tabs.map(t => {
             items.push(<Tab onClick={this.selectTab} activeTab={this.state.activeTab} id={t.id}>{t.item}</Tab>)
         })
 

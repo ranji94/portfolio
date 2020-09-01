@@ -1,0 +1,86 @@
+.contact-container {
+    @include main-text;
+    background-color: $header-bg-color;
+    color: $content-bg-color;
+    display: flex;
+}
+
+.contact-clipped-stripe-1 {
+    background-color: $header-bg-color;
+    flex: 50%;
+    margin-top:6%;
+    height: 80px;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}
+
+.contact-clipped-stripe-2 {
+    background-color: $header-bg-color;
+    flex: 50%;
+    margin-top:6%;
+    height: 80px;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0);
+}
+
+.contact-data-container {
+    flex: auto;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.footer-text {
+    flex: 100%;
+    padding: {
+        top: 5px;
+        bottom: 5px;
+    }
+    text-align: center;
+    background-color: $header-bg-color-shade;
+    @include content-text;
+    color: $header-bg-color-light;
+}
+
+.social-container {
+    display: flex;
+    margin: {
+        left: 10%;
+        right: 10%;
+        bottom: 1%;
+    }
+}
+
+.social-icon {
+    margin-right: 8px;
+    background-color: $header-bg-color-shade;
+    flex: auto;
+    @include vertical-align;
+    width: 80px;
+    height: 80px;
+    transition: background-color 0.2s;
+    cursor: pointer;
+    a {
+        @include vertical-align;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        color: $header-bg-color-light;
+        transition: color 0.2s;
+    }
+}
+
+.social-icon:hover {
+    background-color: $header-bg-color-light;
+    a {
+        color: $header-bg-color-shade;
+    }
+}
+
+.contact-email {
+    @include content-text;
+    text-align: center;
+    flex: 100%;
+    margin-bottom: 15px;
+    a {
+        text-decoration: none;
+        color: $content-bg-color;
+    }
+}

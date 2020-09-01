@@ -4,6 +4,8 @@ $header-height: 100vh;
 // Color palette
 $stripe_bg_color: #e63946;
 $header-bg-color: #1D3557;
+$header-bg-color-light: #3F5779;
+$header-bg-color-shade: #090224;
 $header-text-color: #F1FAEE;
 $content-bg-color: #F1FAEE;
 $menu-item-hover-color: black;
@@ -13,5 +15,7 @@ $lead-text-color: #424242;
 $lead-text-hover-color: #535353;
 $note-color: #EAE94E;
 $note-hover-color: #D9D83D;
+
+///////////////////////
 
 $animation-cubic: cubic-bezier(0.240, 0.465, 0.450, 0.950) both;
