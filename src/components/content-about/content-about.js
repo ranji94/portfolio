@@ -38,14 +38,14 @@ class ContentAbout extends Component {
                         </div>
                     </div>
                     <div className={styles['content-container']}>
-                        <div className={styles['about-item']}>
+                        <div className={styles['about-item-profile']}>
                             <AvatarCard {...{
                                 photo,
                                 header: loadText('avatar-header'),
                                 description: loadText('avatar-description')
                             }} />
                         </div>
-                        <div className={styles['about-item']}>
+                        <div className={styles['about-item-tabs']}>
                             <div className={styles['tabs-container']}>
                                 <Tabs {...{ tabs }} />
                             </div>
