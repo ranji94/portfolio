@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Project from './project'
+import ProjectCard from './project-card'
 import styles from '../../styles/main.scss'
 import Projects from '../../resources/projects.json'
 
@@ -7,10 +7,10 @@ class ContentProjects extends Component {
     render() {
         const { header,
             reference } = this.props
-        
+
         const projectComponents = []
-        Projects.forEach(p => {
-            projectComponents.push(<Project
+        Projects.map(p => {
+            projectComponents.push(<ProjectCard
                 repoLink={p.repoLink}
                 projectType={p.projectType}
                 repoCaption={p.repoCaption}
@@ -18,21 +18,19 @@ class ContentProjects extends Component {
                 serviceStack={p.serviceStack}
                 uiStack={p.uiStack}>
                 {p.header}
-            </Project>)
+            </ProjectCard>)
         })
 
         return (
             <div>
-                <div className={styles['content-box']}>
+                <div className={styles['content-flip-cards-box']}>
                     <div className={styles['flex-container']}>
                         <div className={styles['content-item']}>
                             <div ref={reference} className={styles['content-area']}>
                                 <h1>{header}</h1>
                             </div>
                         </div>
-                    </div>
-                    <div className={styles['content-container']}>
-                        <div className={styles['projects-item']}>
+                        <div className={styles['flip-card-container']}>
                             {projectComponents}
                         </div>
                     </div>

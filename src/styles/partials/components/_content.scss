@@ -14,6 +14,7 @@
 }
 
 .content-area {
+    text-transform: uppercase;
     margin: {
         left: 20%;
         right: 20%;
@@ -48,6 +49,13 @@
     margin: {
         left: 20%;
         right: 20%;
+    }
+}
+
+.content-flip-cards-box {
+    margin: {
+        left: 5%;
+        right: 5%;
     }
 }
 

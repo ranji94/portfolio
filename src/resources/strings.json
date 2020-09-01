@@ -89,5 +89,25 @@
         "stringCode": "service-stack",
         "value": "Service Stack",
         "langCode": "en_GB"
+    },
+    {
+        "stringCode": "contact-email",
+        "value": "jedrzej.piasecki94@gmail.com",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "contact-subject",
+        "value": "Let's work together!",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "contact-header",
+        "value": "Contact",
+        "langCode": "en_GB"
+    },
+    {
+        "stringCode": "footer-text",
+        "value": "Jędrzej Miłosz Piasecki @2020",
+        "langCode": "en_GB"
     }
 ]

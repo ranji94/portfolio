@@ -5,6 +5,8 @@ import Menu from './components/menu'
 import Separator from './components/separator'
 import { loadText } from './operations'
 import ContentProjects from './components/content-projects/content-projects'
+import Contact from './components/contact'
+import socialIconsData from './resources/social.json'
 
 class MainView extends Component {
   constructor(props) {
@@ -21,7 +23,8 @@ class MainView extends Component {
       <AppHeader scrollToAboutNode={() => this.scrollToNode(this.about)} />
 
       <Menu scrollToAboutNode={() => this.scrollToNode(this.about)}
-        scrollToProjectsNode={() => this.scrollToNode(this.projects)} />
+        scrollToProjectsNode={() => this.scrollToNode(this.projects)}
+        scrollToContactNode={() => this.scrollToNode(this.contact)} />
 
       <ContentAbout {...{
         header: loadText('menu-item-about'),
@@ -38,12 +41,10 @@ class MainView extends Component {
         header: loadText('menu-item-projects'),
         reference: (node) => this.projects = node
       }} />
-      <Separator headerQuote {...{
-        header: loadText('quote-1'),
-        subtext: loadText('quote-1-author'),
-        headerStyle: 'italic',
-        subtextStyle: 'italic'
-      }} />
+      <Contact {...{
+        socialIconsData,
+        reference: (node) => this.contact = node
+      }}/>
     </div>)
   }
 }

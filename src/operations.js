@@ -4,7 +4,7 @@ export function loadText(stringCode, resource) {
     let text = ''
     const res = typeof resource === 'undefined' ? STRINGS : resource
 
-    res.forEach(tx => {
+    res.map(tx => {
         if (tx.stringCode === stringCode) {
             text = tx.value
         }

@@ -13,7 +13,7 @@ class Skills extends Component {
         const { skills } = this.props
         const skillBars = []
 
-        skills.forEach(s => {
+        skills.map(s => {
             skillBars.push(<SkillBar {...{ barPercentage: s.skillPercentage, skillBarCaption: s.skillCaption }}>{s.item}</SkillBar>)
         });
 
