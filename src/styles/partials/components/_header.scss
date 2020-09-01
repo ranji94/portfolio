@@ -93,15 +93,19 @@ li:hover {
 } 
 
 .header-button {
+    margin-top: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @extend .menu-button;
     display: block;
     position: relative;
-    transition: font-size 0.2s;
     width: 100%;
+    transition: font-size 0.2s;
 }
 
 .header-button:hover {
-    font-size: 17px;
+    font-size: 1.1vw;
 }
 
 .header-main {
@@ -114,3 +118,13 @@ li:hover {
     font-style: italic;
     animation: enter-from-top 0.5s $animation-cubic;
 }
+
+@media only screen and (max-width: 700px) {
+    .header-container {
+        font-size: 1.8vw;
+    }
+
+    .header-button:hover {
+        font-size: 1.9vw;
+    }
+  }

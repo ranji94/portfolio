@@ -6,7 +6,7 @@ export class MenuItem extends Component {
         const { children,
             header,
             icon } = this.props
-        return (<div className={header ? styles['header-button'] : styles['menu-button']}>
+        return (<div className={header ? '' : styles['menu-button']}>
             <div className={styles['menu-button-container']}>
                 <div className={styles['menu-button-description']}>{children}</div>
                 {

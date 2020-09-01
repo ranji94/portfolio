@@ -41,6 +41,7 @@
     background-color: $content-bg-color;
     justify-content: center;
     align-content: center;
+    margin-top: 10%;
 }
 
 .content-box {
@@ -50,6 +51,44 @@
     }
 }
 
-.about-item {
+.about-item-profile {
     flex: 50%;
+}
+
+.about-item-tabs {
+    flex: 50%;
+}
+
+@media only screen and (max-width: 1350px) {
+    .about-item-profile {
+        flex: 30%;
+    }
+
+    .about-item-tabs {
+        flex: 70%;
+    }
+
+    .content-box {
+        margin: {
+            left: 10%;
+            right: 10%;
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .about-item-profile {
+        flex: 100%;
+    }
+
+    .about-item-tabs {
+        flex: 100%;
+    }
+
+    .content-box {
+        margin: {
+            left: 1%;
+            right: 1%;
+        }
+    }
 }

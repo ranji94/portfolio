@@ -25,10 +25,8 @@ class AppHeader extends Component {
                 <div>
                     <div className={styles['header-main']}><h1>{loadText('header-main')}</h1></div>
                     <div className={styles['header-sub']}>{loadText('header-sub')}</div>
-                    <div className={styles['flex-container']}>
-                        <div className={styles['flex-item']}>
-                            <div onClick={() => scrollToAboutNode()}><MenuItem header icon={<span className={styles['header-button-arrow']}><ArrowForwardIosOutlined /></span>}>{loadText('menu-item-view', BUTTONS)}</MenuItem></div>
-                        </div>
+                    <div className={styles['header-button']}>
+                        <div onClick={() => scrollToAboutNode()}><MenuItem header icon={<span className={styles['header-button-arrow']}><ArrowForwardIosOutlined /></span>}>{loadText('menu-item-view', BUTTONS)}</MenuItem></div>
                     </div>
                 </div>
             </div>
