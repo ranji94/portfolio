@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from '../styles/main.scss'
+import Slide from 'react-reveal/Slide'
 
 class Separator extends Component {
     render() {
@@ -14,15 +15,19 @@ class Separator extends Component {
                 <div className={styles['separator-container-primary']}>
                     <div className={styles['separator-item']}>
                         <div>
+                            <Slide left>
                             <div className={styles['separator-header-' + headerStyle]}>
                                 { headerQuote
                                     ? <blockquote>{header}</blockquote>
                                     : header
                                 }
                             </div>
+                            </Slide>
+                            <Slide right>
                             <div className={styles['separator-subtext-' + subtextStyle]}>
                                 {subtext}
                             </div>
+                            </Slide>
                         </div>
                     </div>
                 </div>

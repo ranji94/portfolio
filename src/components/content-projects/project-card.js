@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../../styles/main.scss'
 import { loadText } from '../../operations'
+import Fade from 'react-reveal/Fade'
 
 function renderChips(array) {
     const chipsArray = []
@@ -21,7 +22,8 @@ class ProjectCard extends Component {
             description,
             serviceStack,
             uiStack } = this.props
-        return (<div className={styles['flip-card']}>
+        return (<Fade bottom>
+        <div className={styles['flip-card']}>
             <div className={styles['flip-card-inner']}>
                 <div className={styles['flip-card-back']}>
                     <div className={styles['project-header']}><h1><span>{children}</span></h1></div>
@@ -64,7 +66,8 @@ class ProjectCard extends Component {
 
                 </div>
             </div>
-        </div>)
+        </div>
+        </Fade>)
     }
 }
 
