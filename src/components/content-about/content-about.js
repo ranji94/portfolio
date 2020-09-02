@@ -11,6 +11,7 @@ import otherSkills from '../../resources/skills/other.json'
 import { loadText } from '../../operations'
 import Advantages from '../advantage/advantages'
 import advantagesData from '../../resources/advantages.json'
+import Fade from 'react-reveal/Fade'
 
 class ContentAbout extends Component {
     render() {
@@ -33,11 +34,14 @@ class ContentAbout extends Component {
                     <div className={styles['flex-container']}>
                         <div className={styles['content-item']}>
                             <div ref={reference} className={styles['content-area']}>
-                                <h1>{header}</h1>
+                                <Fade bottom>
+                                    <h1>{header}</h1>
+                                </Fade>
                             </div>
                         </div>
                     </div>
                     <div className={styles['content-container']}>
+                        <Fade left>
                         <div className={styles['about-item-profile']}>
                             <AvatarCard {...{
                                 photo,
@@ -45,11 +49,14 @@ class ContentAbout extends Component {
                                 description: loadText('avatar-description')
                             }} />
                         </div>
+                        </Fade>
+                        <Fade right>
                         <div className={styles['about-item-tabs']}>
                             <div className={styles['tabs-container']}>
                                 <Tabs {...{ tabs }} />
                             </div>
                         </div>
+                        </Fade>
                     </div>
                     <div className={styles['content-container']}>
                         <Advantages {...{ advantagesData }} />

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ProjectCard from './project-card'
 import styles from '../../styles/main.scss'
 import Projects from '../../resources/projects.json'
+import Fade from 'react-reveal/Fade'
 
 class ContentProjects extends Component {
     render() {
@@ -27,7 +28,9 @@ class ContentProjects extends Component {
                     <div className={styles['flex-container']}>
                         <div className={styles['content-item']}>
                             <div ref={reference} className={styles['content-area']}>
-                                <h1>{header}</h1>
+                                <Fade bottom>
+                                    <h1>{header}</h1>
+                                </Fade>
                             </div>
                         </div>
                         <div className={styles['flip-card-container']}>

@@ -44,7 +44,7 @@ li:hover {
     padding: 3px;
     margin-right: 1%;
     text-align: center;
-    transition: color 0.2s;
+    transition: border-color 0.2s;
     border-radius: 5px;
     z-index: 2;
     text-decoration: none;
@@ -54,7 +54,7 @@ li:hover {
 }
 
 .menu-button:hover {
-    border: solid 2px $stripe_bg_color;
+    border-color: $stripe_bg_color;
     color: $stripe_bg_color;
 }
 
@@ -93,22 +93,21 @@ li:hover {
 
 .header-button {
     margin-top: 3%;
-    display: flex;
+    flex: 100%;
     align-items: center;
     justify-content: center;
     @extend .menu-button;
     display: block;
     position: relative;
     width: 100%;
-    transition: font-size 0.2s;
+    transition: background-color 0.2s;
 }
 
-.header-button:hover {
-    font-size: 1.1vw;
+.header-button-container {
+    display: flex;
 }
 
 .header-main {
-    letter-spacing: 6px;
     animation: enter-from-bottom 0.5s $animation-cubic;
 }
 

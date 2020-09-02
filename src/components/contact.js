@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import styles from '../styles/main.scss'
 import { LinkedIn, GitHub, Facebook } from '@material-ui/icons'
-import { loadText } from '../operations'
+import Fade from 'react-reveal/Fade'
+import Flip from 'react-reveal/Flip'
+import Zoom from 'react-reveal/Zoom'
 
 const SOCIAL_ICON_SIZE = '50px'
 
@@ -29,7 +31,12 @@ function getIcon(iconName) {
 
 class Contact extends Component {
     render() {
-        const { reference, socialIconsData } = this.props
+        const { reference, 
+            socialIconsData,
+            header,
+            email,
+            subject,
+            footerText } = this.props
         const socialIcons = []
 
         socialIconsData.map(s => {
@@ -46,21 +53,27 @@ class Contact extends Component {
             <div className={styles['contact-container']}>
                 <div className={styles['contact-data-container']}>
                     <div ref={reference} className={styles['content-area']}>
-                        <h1>{loadText('contact-header')}</h1>
+                        <Fade bottom>
+                            <h1>{header}</h1>
+                        </Fade>
                     </div>
                     <div className={styles['flex-container']}>
                         <div className={styles['contact-email']}>
-                            <a href={`mailto:${loadText('contact-email')}?subject=${loadText('contact-subject')}`}>{loadText('contact-email')}</a>
+                            <Flip bottom>
+                                <a href={`mailto:${email}?subject=${subject}`}>{email}</a>
+                            </Flip>
                         </div>
                     </div>
                     <div className={styles['flex-container']}>
-                        <div className={styles['social-container']}>
-                            {socialIcons}
-                        </div>
+                        <Zoom cascade>
+                            <div className={styles['social-container']}>
+                                {socialIcons}
+                            </div>
+                        </Zoom>
                     </div>
                     <div className={styles['flex-container']}>
                         <div className={styles['footer-text']}>
-                            {loadText('footer-text')}
+                            {footerText}
                         </div>
                     </div>
                 </div>

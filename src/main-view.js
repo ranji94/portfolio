@@ -43,6 +43,10 @@ class MainView extends Component {
       }} />
       <Contact {...{
         socialIconsData,
+        header: loadText('contact-header'),
+        email: loadText('contact-email'),
+        subject: loadText('contact-subject'),
+        footerText: loadText('footer-text'),
         reference: (node) => this.contact = node
       }}/>
     </div>)

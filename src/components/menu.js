@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import styles from '../styles/main.scss'
 import { loadText } from '../operations';
+import Fade from 'react-reveal/Fade'
 
 class Menu extends Component {
     render() {
@@ -15,9 +15,11 @@ class Menu extends Component {
         ]
 
         return (
-            <ul>
-                {navItems}
-            </ul>
+            <Fade top cascade>
+                <ul>
+                    {navItems}
+                </ul>
+            </Fade>
         )
     }
 }

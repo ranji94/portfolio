@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import styles from '../../styles/main.scss'
 import Advantage from './advantage'
-import { WebOutlined,
+import {
+    WebOutlined,
     CodeOutlined,
     PeopleOutlined,
     DevicesOutlined,
-    EmojiObjectsOutlined } from '@material-ui/icons'
+    EmojiObjectsOutlined
+} from '@material-ui/icons'
+import Zoom from 'react-reveal/Zoom'
 
 const ADVANTAGE_ICON_SIZE = '5vw'
 
@@ -36,7 +39,9 @@ function getIcon(iconName) {
 class Advantages extends Component {
     render() {
         return (<div className={styles['flex-container']}>
-            {this.renderAdvantages()}
+            <Zoom clear>
+                {this.renderAdvantages()}
+            </Zoom>
         </div>)
     }
 
