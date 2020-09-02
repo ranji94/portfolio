@@ -27,9 +27,6 @@ class ContentAbout extends Component {
 
         return (
             <div>
-                <div className={styles['flex-container']}>
-                    <div className={styles['stripe-item']} />
-                </div>
                 <div className={styles['content-box']}>
                     <div className={styles['flex-container']}>
                         <div className={styles['content-item']}>

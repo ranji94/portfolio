@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { loadText } from '../operations';
 import Fade from 'react-reveal/Fade'
+import styles from '../styles/main.scss'
 
 class Menu extends Component {
     render() {
@@ -19,6 +20,9 @@ class Menu extends Component {
                 <ul>
                     {navItems}
                 </ul>
+                <div className={styles['flex-container']}>
+                    <div className={styles['stripe-item']} />
+                </div>
             </Fade>
         )
     }
