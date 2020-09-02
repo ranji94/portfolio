@@ -68,7 +68,7 @@
     flex: 33%;
     font-size: 13px;
     width: 300px;
-    height: 550px;
+    height: 500px;
     border: 1px solid #f1f1f1;
 
     @include content-text;
@@ -92,14 +92,19 @@
   .flip-card-back {
     position: absolute;
     width: 100%;
-    height: 550px;
+    height: 500px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: $separator-bg-color-primary;
+    transition: background-color 0.2s;
     color: $content-bg-color;
+  }
+
+  .flip-card-back:hover {
+      background-color: $header-bg-color-light;
   }
 
   .flip-card-container {
@@ -112,10 +117,10 @@
   @media only screen and (max-width: 1000px) {
     .flip-card {
         flex: 100%;
-        font-size: 15px;
+        font-size: 13px;
         background-color: transparent;
         width: 300px;
-        height: 550px;
+        height: 500px;
         border: 1px solid #f1f1f1;
     
         @include content-text;

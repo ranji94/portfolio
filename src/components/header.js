@@ -4,7 +4,6 @@ import { loadText } from '../operations'
 import MenuItem from './menu-item'
 import { ArrowForwardIosOutlined } from '@material-ui/icons'
 import Buttons from '../resources/buttons.json'
-import Fade from 'react-reveal/Fade'
 
 function getAnimatedLinesBackground() {
     return (
@@ -23,7 +22,6 @@ class AppHeader extends Component {
         return (
             <div className={styles['header-container']}>
                 {getAnimatedLinesBackground()}
-                <Fade cascade>
                     <div>
                         <div className={styles['header-main']}><h1>{loadText('header-main')}</h1></div>
                         <div className={styles['header-sub']}>{loadText('header-sub')}</div>
@@ -33,7 +31,6 @@ class AppHeader extends Component {
                             </div>
                         </div>
                     </div>
-                </Fade>
             </div>
         )
     }

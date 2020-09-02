@@ -7,6 +7,7 @@ import { loadText } from './operations'
 import ContentProjects from './components/content-projects/content-projects'
 import Contact from './components/contact'
 import socialIconsData from './resources/social.json'
+import styles from './styles/main.scss'
 
 class MainView extends Component {
   constructor(props) {
@@ -20,12 +21,13 @@ class MainView extends Component {
 
   render() {
     return (<div>
+      {console.log(window.pageYOffset)}
       <AppHeader scrollToAboutNode={() => this.scrollToNode(this.about)} />
-
-      <Menu scrollToAboutNode={() => this.scrollToNode(this.about)}
-        scrollToProjectsNode={() => this.scrollToNode(this.projects)}
-        scrollToContactNode={() => this.scrollToNode(this.contact)} />
-
+      <div className={styles['menu-sticky-element']}>
+        <Menu scrollToAboutNode={() => this.scrollToNode(this.about)}
+          scrollToProjectsNode={() => this.scrollToNode(this.projects)}
+          scrollToContactNode={() => this.scrollToNode(this.contact)} />
+      </div>
       <ContentAbout {...{
         header: loadText('menu-item-about'),
         content: loadText('about-description'),
@@ -48,7 +50,7 @@ class MainView extends Component {
         subject: loadText('contact-subject'),
         footerText: loadText('footer-text'),
         reference: (node) => this.contact = node
-      }}/>
+      }} />
     </div>)
   }
 }
