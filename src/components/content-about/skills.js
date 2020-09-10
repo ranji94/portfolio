@@ -1,16 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from '../../styles/main.scss'
-import SkillBar from './skill-bar'
+import { SkillBar } from './skill-bar'
 
-class Skills extends Component {
-    render() {
-        return (<div className={styles['skills-container']}>
-            {this.renderSkills()}
-        </div>)
-    }
-
-    renderSkills() {
-        const { skills } = this.props
+export const Skills = ({ skills }) => {
+    function renderSkills() {
         const skillBars = []
 
         skills.map(s => {
@@ -19,6 +12,8 @@ class Skills extends Component {
 
         return skillBars
     }
-}
 
-export default Skills
+    return (<div className={styles['skills-container']}>
+        {renderSkills()}
+    </div>)
+}

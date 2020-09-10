@@ -1,14 +1,12 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from '../styles/main.scss'
 import Slide from 'react-reveal/Slide'
 
-class Separator extends Component {
-    render() {
-        const { header,
-            subtext,
-            headerStyle,
-            headerQuote,
-            subtextStyle } = this.props
+export const Separator = ({ header,
+    subtext,
+    headerStyle,
+    headerQuote,
+    subtextStyle } ) => {
         return (
             <div>
                 <div className={styles['separator-container-secondary']}></div>
@@ -34,7 +32,6 @@ class Separator extends Component {
                 <div className={styles['separator-container-secondary']}></div>
             </div>
         )
-    }
 }
 
 Separator.defaultProps = {
@@ -42,4 +39,3 @@ Separator.defaultProps = {
     headerQuote: false,
     subtextStyle: 'default'
 }
-export default Separator

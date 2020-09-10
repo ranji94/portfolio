@@ -1,55 +1,36 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import styles from '../../styles/main.scss'
-import Tab from './tab'
+import { Tab } from './tab'
 import { setAnimateSkillbars } from '../../redux/actions'
 
-class Tabs extends Component {
-    constructor(props) {
-        super(props)
-        this.state = { activeTab: 1 }
+export const Tabs = ({ tabs }) => {
+    const [activeTab, setActiveTab] = useState(1)
+    const dispatch = useDispatch()
+
+    function selectTab(id) {
+        setActiveTab(id)
+        dispatch(setAnimateSkillbars(true))
     }
 
-    selectTab = (id) => {
-        const { setAnimateSkillbars } = this.props
-
-        this.setState({ activeTab: id })
-        setAnimateSkillbars(true)
-    }
-
-    render() {
-        const { tabs } = this.props
-
-        return (<div className={styles['tabs-container']}>
-            <div className={styles['tabs-switcher']}>
-                {this.renderTabs()}
-            </div>
-            <div className={styles['tab-content-container']}>
-                <div className={styles['tab-content']}>
-                    {tabs[this.state.activeTab - 1].content}
-                </div>
-            </div>
-        </div>)
-    }
-
-    renderTabs() {
+    function renderTabs() {
         const items = []
-        const { tabs } = this.props
 
-        tabs.map(t => {
-            items.push(<Tab onClick={this.selectTab} activeTab={this.state.activeTab} id={t.id}>{t.item}</Tab>)
+        tabs.map(({ id, item }) => {
+            items.push(<Tab onClick={() => selectTab(id)} activeTab={activeTab} id={id}>{item}</Tab>)
         })
 
         return items
     }
-}
 
-const mapStateToProps = (state) => {
-    const { animateSkillbars } = state.animateSkillbars || false
-    return { animateSkillbars }
+    return (<div className={styles['tabs-container']}>
+        <div className={styles['tabs-switcher']}>
+            {renderTabs()}
+        </div>
+        <div className={styles['tab-content-container']}>
+            <div className={styles['tab-content']}>
+                {tabs[activeTab - 1].content}
+            </div>
+        </div>
+    </div>)
 }
-
-export default connect(
-    mapStateToProps, 
-    { setAnimateSkillbars }
-)(Tabs)
