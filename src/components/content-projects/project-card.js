@@ -1,28 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from '../../styles/main.scss'
 import { loadText } from '../../operations'
 import Fade from 'react-reveal/Fade'
 
-function renderChips(array) {
-    const chipsArray = []
+export const ProjectCard = ({ children,
+    repoLink,
+    projectType,
+    repoCaption,
+    description,
+    serviceStack,
+    uiStack }) => {
+        
+    function renderChips(array) {
+        const chipsArray = []
 
-    array.map(i => {
-        chipsArray.push(<div className={styles['chips-item']}><div className={styles['technology-chips']}>{i}</div></div>)
-    })
+        array.map(i => {
+            chipsArray.push(<div className={styles['chips-item']}><div className={styles['technology-chips']}>{i}</div></div>)
+        })
 
-    return chipsArray
-}
+        return chipsArray
+    }
 
-class ProjectCard extends Component {
-    render() {
-        const { children,
-            repoLink,
-            projectType,
-            repoCaption,
-            description,
-            serviceStack,
-            uiStack } = this.props
-        return (<Fade bottom>
+    return (<Fade bottom>
         <div className={styles['flip-card']}>
             <div className={styles['flip-card-inner']}>
                 <div className={styles['flip-card-back']}>
@@ -67,8 +66,5 @@ class ProjectCard extends Component {
                 </div>
             </div>
         </div>
-        </Fade>)
-    }
+    </Fade>)
 }
-
-export default ProjectCard

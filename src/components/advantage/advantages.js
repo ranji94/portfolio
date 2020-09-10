@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import styles from '../../styles/main.scss'
-import Advantage from './advantage'
+import { Advantage } from './advantage'
 import {
     WebOutlined,
     CodeOutlined,
@@ -10,57 +10,53 @@ import {
 } from '@material-ui/icons'
 import Zoom from 'react-reveal/Zoom'
 
-const ADVANTAGE_ICON_SIZE = '5vw'
+export const Advantages = ({ advantagesData }) => {
 
-function getIcon(iconName) {
-    let component = null
-    const defaultIconProps = {
-        style: { fontSize: ADVANTAGE_ICON_SIZE },
-        className: styles['advantage-icon']
-    }
+    const ADVANTAGE_ICON_SIZE = '5vw'
 
-    const iconFactory = [
-        { name: 'web', iconComponent: <WebOutlined {...defaultIconProps} /> },
-        { name: 'code', iconComponent: <CodeOutlined {...defaultIconProps} /> },
-        { name: 'people', iconComponent: <PeopleOutlined {...defaultIconProps} /> },
-        { name: 'devices', iconComponent: <DevicesOutlined {...defaultIconProps} /> },
-        { name: 'emojiobjects', iconComponent: <EmojiObjectsOutlined {...defaultIconProps} /> },
-    ]
-
-    iconFactory.map(ico => {
-        if (ico.name === iconName) {
-            component = ico.iconComponent
+    function getIcon(iconName) {
+        let component = null
+        const defaultIconProps = {
+            style: { fontSize: ADVANTAGE_ICON_SIZE },
+            className: styles['advantage-icon']
         }
-    })
 
-    return component
-}
+        const iconFactory = [
+            { name: 'web', iconComponent: <WebOutlined {...defaultIconProps} /> },
+            { name: 'code', iconComponent: <CodeOutlined {...defaultIconProps} /> },
+            { name: 'people', iconComponent: <PeopleOutlined {...defaultIconProps} /> },
+            { name: 'devices', iconComponent: <DevicesOutlined {...defaultIconProps} /> },
+            { name: 'emojiobjects', iconComponent: <EmojiObjectsOutlined {...defaultIconProps} /> },
+        ]
 
-class Advantages extends Component {
-    render() {
-        return (<div className={styles['flex-container']}>
-            <Zoom clear>
-                {this.renderAdvantages()}
-            </Zoom>
-        </div>)
+        iconFactory.map(ico => {
+            if (ico.name === iconName) {
+                component = ico.iconComponent
+            }
+        })
+
+        return component
     }
 
-    renderAdvantages() {
-        const { advantagesData } = this.props
+    function renderAdvantages() {
         const advantageComponents = []
 
-        advantagesData.map(a => {
+        advantagesData.map(({ header, description, icon, backgroundColor }) => {
             advantageComponents.push(<div className={styles['advantage-item']}>
                 <Advantage {...{
-                    header: a.header,
-                    description: a.description,
-                    icon: getIcon(a.icon),
-                    iconBackgroundColor: a.backgroundColor
+                    header,
+                    description,
+                    icon: getIcon(icon),
+                    iconBackgroundColor: backgroundColor
                 }} /></div>)
         })
 
         return advantageComponents
     }
-}
 
-export default Advantages
+    return (<div className={styles['flex-container']}>
+        <Zoom clear>
+            {renderAdvantages()}
+        </Zoom>
+    </div>)
+}

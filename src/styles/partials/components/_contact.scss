@@ -8,7 +8,7 @@
 .contact-clipped-stripe-1 {
     background-color: $header-bg-color;
     flex: 50%;
-    margin-top:6%;
+    margin-top: 16%;
     height: 80px;
     clip-path: polygon(0 0, 0 100%, 100% 100%);
 }
@@ -16,7 +16,7 @@
 .contact-clipped-stripe-2 {
     background-color: $header-bg-color;
     flex: 50%;
-    margin-top:6%;
+    margin-top: 16%;
     height: 80px;
     clip-path: polygon(0 100%, 100% 100%, 100% 0);
 }
