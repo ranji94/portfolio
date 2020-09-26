@@ -1,25 +1,16 @@
 [
     {
-        "item": "Education",
-        "skillPercentage": "85",
-        "skillCaption": "Bachelor of Engineering"
+        "item": "Commercial Experience",
+        "skillPercentage": "30",
+        "skillCaption": "1 yr 2 months"
     },
     {
         "item": "English",
-        "skillPercentage": "70",
-        "skillCaption": "upper-intermediate"
+        "skillPercentage": "70"
     },
     {
-        "item": "Commercial Experience",
-        "skillPercentage": "30",
-        "skillCaption": "1 year"
-    },
-    {
-        "item": "Driving license",
-        "skillPercentage": "101"
-    },
-    {
-        "item": "SCRUM",
-        "skillPercentage": "101"
+        "item": "Education",
+        "skillPercentage": "85",
+        "skillCaption": "Bachelor of Engineering"
     }
 ]

@@ -8,23 +8,15 @@
         "skillPercentage": "75"
     },
     {
-        "item": "Oracle SQL",
+        "item": "SQL (Oracle)",
         "skillPercentage": "70"
+    },
+    {
+        "item": "Apache Ignite",
+        "skillPercentage": "60"
     },
     {
         "item": "Kafka",
         "skillPercentage": "50"
-    },
-    {
-        "item": "Ignite",
-        "skillPercentage": "30"
-    },
-    {
-        "item": "CI/CD",
-        "skillPercentage": "30"
-    },
-    {
-        "item": "REST",
-        "skillPercentage": "101"
     }
 ]

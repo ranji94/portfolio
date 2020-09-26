@@ -4,27 +4,19 @@
         "skillPercentage": "101"
     },
     {
-        "item": "Docker",
-        "skillPercentage": "101"
-    },
-    {
-        "item": "Kubernetes",
-        "skillPercentage": "101"
-    },
-    {
-        "item": "Jira",
-        "skillPercentage": "101"
-    },
-    {
-        "item": "Confluence",
-        "skillPercentage": "101"
-    },
-    {
         "item": "Gradle",
         "skillPercentage": "101"
     },
     {
         "item": "Webpack",
+        "skillPercentage": "101"
+    },
+    {
+        "item": "Docker",
+        "skillPercentage": "101"
+    },
+    {
+        "item": "Kubernetes",
         "skillPercentage": "101"
     }
 ]
