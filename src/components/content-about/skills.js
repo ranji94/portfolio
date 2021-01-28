@@ -6,8 +6,8 @@ export const Skills = ({ skills }) => {
     function renderSkills() {
         const skillBars = []
 
-        skills.map(s => {
-            skillBars.push(<SkillBar {...{ barPercentage: s.skillPercentage, skillBarCaption: s.skillCaption }}>{s.item}</SkillBar>)
+        skills.map(({ skillPercentage, skillCaption, beginningDate, item }) => {
+            skillBars.push(<SkillBar {...{ barPercentage: skillPercentage, skillBarCaption: skillCaption, beginningDate }}>{item}</SkillBar>)
         });
 
         return skillBars

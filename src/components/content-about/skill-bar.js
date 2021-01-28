@@ -3,10 +3,43 @@ import { useSelector, useDispatch } from 'react-redux'
 import { setAnimateSkillbars } from '../../redux/actions'
 import styles from '../../styles/main.scss'
 import { CheckOutlined } from '@material-ui/icons'
+import { MONTHS_IN_YEAR } from '../../constants'
 
 export const SkillBar = ({ barPercentage,
     children,
-    skillBarCaption }) => {
+    skillBarCaption ,
+    beginningDate }) => {
+
+    if (typeof beginningDate !== 'undefined') {
+        const expMessageBuilder = (years, months) => {
+            const getFormattedTimeUnit = (timeUnit, msg) => { return timeUnit + ' ' + msg + (timeUnit > 1 ? 's' : '') }
+            return getFormattedTimeUnit(years, 'year') + ((months > 0) ? ' and ' + getFormattedTimeUnit(months, 'month') : '')
+        }
+
+        const expInHumanUnits = (exp) => {
+            let yrs = 0
+            let mnths = 0
+
+            while(exp > 0) {
+                if (exp >= 12) {
+                    yrs++
+                    exp-=12
+                } 
+                else {
+                    mnths = exp
+                    exp = 0
+                }
+            }
+
+            return expMessageBuilder(yrs, mnths)
+        }
+        const startDate = new Date(beginningDate)
+        const currentDate = new Date()
+        
+        const totalExpInMonths = (currentDate.getFullYear() - startDate.getFullYear())*MONTHS_IN_YEAR + currentDate.getMonth() - startDate.getMonth()
+
+        skillBarCaption = expInHumanUnits(totalExpInMonths)
+    }
 
     function getSkillBarCaption(caption, value) {
         if (typeof caption === 'undefined') {
@@ -16,7 +49,6 @@ export const SkillBar = ({ barPercentage,
             return caption
         }
     }
-
 
     const animateSkillbars = useSelector(state => state.animateSkillbars.animateSkillbars)
     const dispatch = useDispatch()
