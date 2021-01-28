@@ -8,17 +8,16 @@
         "projectType": "Commercial"
     },
     {
-        "header": "Device Activation Service",
+        "header": "Sweetify",
         "description": [
-            "Telematics GSM/GPS devices activation service. In this application, user is guided by activation wizard through the steps necessary",
-            " to perform valid device activation. Every step contains complex data validation by frontend and server side to make providing informations",
-            " easier for the user. It is also logging activation history which is used to troubleshooting purpose."
+            "This application is helpful for people addicted to sweets, which is based on simple psychology tricks, ",
+            "used to motivate people to develop the body and eat healthy foods. (Currently only Polish language supported)"
         ],
-        "serviceStack": ["Java", "Spring", "Swagger", "REST", "SOAP", "Oracle SQL"],
-        "uiStack": ["React", "Redux", "Express.js", "Axios"],
+        "serviceStack": ["No Backend"],
+        "uiStack": ["React", "Redux", "SASS"],
         "repoCaption": "Open Application",
-        "repoLink": "https://link-activation.webfleet.com/?locale=en_us",
-        "projectType": "Commercial"
+        "repoLink": "https://sweetify.vercel.app",
+        "projectType": "Non-commercial"
     },
     {
         "header": "Portfolio",

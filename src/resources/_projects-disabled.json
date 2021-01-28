@@ -1,0 +1,15 @@
+[
+    {
+        "header": "Device Activation Service",
+        "description": [
+            "Telematics GSM/GPS devices activation service. In this application, user is guided by activation wizard through the steps necessary",
+            " to perform valid device activation. Every step contains complex data validation by frontend and server side to make providing informations",
+            " easier for the user. It is also logging activation history which is used to troubleshooting purpose."
+        ],
+        "serviceStack": ["Java", "Spring", "Swagger", "REST", "SOAP", "Oracle SQL"],
+        "uiStack": ["React", "Redux", "Express.js", "Axios"],
+        "repoCaption": "Open Application",
+        "repoLink": "https://link-activation.webfleet.com/?locale=en_us",
+        "projectType": "Commercial"
+    }
+]

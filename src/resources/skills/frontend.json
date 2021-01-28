@@ -1,27 +1,27 @@
 [
     {
+        "item": "JavaScript (ES6)",
+        "skillPercentage": "75"
+    },
+    {
         "item": "React",
         "skillPercentage": "80"
-    },
-    {
-        "item": "SASS/CSS",
-        "skillPercentage": "80"
-    },
-    {
-        "item": "RWD",
-        "skillPercentage": "80"
-    },
-    {
-        "item": "ES6/JS",
-        "skillPercentage": "75"
     },
     {
         "item": "Redux",
         "skillPercentage": "70"
     },
     {
+        "item": "RWD",
+        "skillPercentage": "80"
+    },
+    {
         "item": "UX",
         "skillPercentage": "30"
+    },
+    {
+        "item": "SASS/CSS",
+        "skillPercentage": "80"
     },
     {
         "item": "Node.js",
